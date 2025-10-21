@@ -9,7 +9,6 @@ import com.zoo.species.Penguin;
 import com.zoo.zookeper.ZooKeeper;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ZooSimulator {
 
