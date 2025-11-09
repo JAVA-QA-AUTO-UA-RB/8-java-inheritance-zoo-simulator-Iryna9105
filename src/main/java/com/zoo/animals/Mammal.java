@@ -1,19 +1,20 @@
 package com.zoo.animals;
 
-public class Mammal extends Animal {
+public abstract class Mammal extends Animal {
 
     protected String furColor;
 
 
-    public Mammal(String name, int age, double weight, int energyLevel, int happinessLevel, String furColor) {
-      super(name, age, weight, energyLevel, happinessLevel );
+    public Mammal(String name, int energyLevel, String furColor) {
+      super(name, energyLevel);
       this.furColor = furColor;
     }
 
-    public void groom() {
-        increaseHappinessLevel(25);
-        System.out.println(getName() + " liked the grooming!! Its happiness level has increased to " + happinessLevel);
+    public abstract void move();
 
+    public void groom() {
+        System.out.println( name + " liked the grooming!!");
+        increaseEnergyLevel(20);
     }
 
     @Override
